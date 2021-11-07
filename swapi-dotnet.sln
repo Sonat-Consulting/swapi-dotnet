@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "swapi-dotnet", "swapi-dotnet\swapi-dotnet.csproj", "{0E5728C5-99BB-46D7-9A6B-E229BACACA70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "swapi-dotnet.UnitTests", "swapi-dotnet.UnitTests\swapi-dotnet.UnitTests.csproj", "{B9F15720-825D-4FAB-82C5-CEE89D643B54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{0E5728C5-99BB-46D7-9A6B-E229BACACA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E5728C5-99BB-46D7-9A6B-E229BACACA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E5728C5-99BB-46D7-9A6B-E229BACACA70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F15720-825D-4FAB-82C5-CEE89D643B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F15720-825D-4FAB-82C5-CEE89D643B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F15720-825D-4FAB-82C5-CEE89D643B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F15720-825D-4FAB-82C5-CEE89D643B54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
