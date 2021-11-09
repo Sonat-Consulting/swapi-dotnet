@@ -5,7 +5,7 @@ on:
     types: [published]
 
 env:
-  REGISTRY: ghce.io
+  REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
