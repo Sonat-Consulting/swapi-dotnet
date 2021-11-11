@@ -22,11 +22,11 @@ jobs:
       - name: Test
         run: dotnet test --no-restore --verbosity normal
       - name: Publish .net artifacts
-        run: dotnet publish -c Release -o /app ./swapi-dotnet
+        run: dotnet publish -c Release -o ./app ./swapi-dotnet
 
       - uses: actions/upload-artifact@v2
         with:
           name: swapi-dotnet-artifact
-          path: /app
+          path: ./app
         
   
