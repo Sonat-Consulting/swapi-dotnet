@@ -7,3 +7,8 @@ Accept: application/json
 # @name GetPeople
 GET http://localhost:5000/swapi/people
 Accept: application/json
+
+###
+# @name GetFilmsDev
+GET https://swapi-dotnet-dev.azurewebsites.net/swapi/films
+Accept: application/json
