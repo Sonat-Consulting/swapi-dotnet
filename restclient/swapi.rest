@@ -18,5 +18,10 @@ GET https://swapi-dotnet-dev.azurewebsites.net/swapi/films
 Accept: application/json
 
 ###
+# @name GetPeopleDev
+GET https://swapi-dotnet-dev.azurewebsites.net/swapi/people
+
+
+###
 # @name GetVersionDev
 GET https://swapi-dotnet-dev.azurewebsites.net/version
