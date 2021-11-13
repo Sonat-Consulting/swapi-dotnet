@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using FakeItEasy;
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
 using Swapi.Dotnet.Services;
 using Xunit;
 
@@ -12,7 +14,7 @@ namespace swapi_dotnet.UnitTests.Services
 
         public FilmsServiceTests()
         {
-            _filmsService = new FilmsService();
+            _filmsService = new FilmsService(A.Fake<ILogger<FilmsService>>());
         }
 
         [Fact]

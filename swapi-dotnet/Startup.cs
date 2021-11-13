@@ -1,19 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Swapi.Dotnet.Services;
 
-namespace swapi_dotnet
+namespace Swapi.Dotnet
 {
     public class Startup
     {
@@ -37,6 +31,13 @@ namespace swapi_dotnet
             services.AddScoped<IPeopleService, PeopleService>();
 
             services.AddApplicationInsightsTelemetry();
+
+            services.AddHttpLogging(options =>
+            {
+                options.LoggingFields = HttpLoggingFields.All;
+                options.RequestBodyLogLimit = 4096;
+                options.ResponseBodyLogLimit = 4096;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +50,9 @@ namespace swapi_dotnet
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "swapi_dotnet v1"));
             }
 
-            //app.UseHttpsRedirection();
+            app.UseHttpLogging();
+
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using FakeItEasy;
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
 using Swapi.Dotnet.Services;
 using Xunit;
 
@@ -12,7 +14,7 @@ namespace swapi_dotnet.UnitTests.Services
 
         public PeopleServiceTests()
         {
-            _peopleService = new PeopleService();
+            _peopleService = new PeopleService(A.Fake<ILogger<PeopleService>>());
         }
 
         [Fact]
