@@ -3,7 +3,7 @@ name: dotnet build, test and deploy dev
 on: [push]
 
 env:
-  DOTNET_VERSION: '5.0.x'
+  DOTNET_VERSION: '6.0.x'
 
 jobs:
   build:
