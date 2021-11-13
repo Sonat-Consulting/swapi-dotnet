@@ -1,14 +1,22 @@
 ###
 # @name GetFilms
-GET http://localhost:5000/swapi/films
+GET https://localhost:5001/swapi/films
 Accept: application/json
 
 ###
 # @name GetPeople
-GET http://localhost:5000/swapi/people
-Accept: application/json
+GET https://localhost:5001/swapi/people
+
+
+###
+# @name GetVersion
+GET https://localhost:5001/version
 
 ###
 # @name GetFilmsDev
 GET https://swapi-dotnet-dev.azurewebsites.net/swapi/films
 Accept: application/json
+
+###
+# @name GetVersionDev
+GET https://swapi-dotnet-dev.azurewebsites.net/version
