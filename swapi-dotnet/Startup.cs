@@ -36,7 +36,7 @@ namespace swapi_dotnet
             services.AddScoped<IFilmsService, FilmsService>();
             services.AddScoped<IPeopleService, PeopleService>();
 
-            //services.AddApplicationInsightsTelemetry();
+            services.AddApplicationInsightsTelemetry();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
