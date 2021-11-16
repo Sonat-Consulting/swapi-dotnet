@@ -21,6 +21,8 @@ namespace Swapi.Dotnet.Services
 
         public async Task<IEnumerable<Person>> GetPeople()
         {
+            _logger.LogInformation("Fetching people");
+            _logger.LogWarning("Test warning while fetching people");
             return await LoadAndDeserializeResource<IEnumerable<Person>>("Data.people.json");
         }
     }
