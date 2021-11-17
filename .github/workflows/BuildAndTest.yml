@@ -45,7 +45,7 @@ jobs:
       - name: 'Deploy to Azure WebApp'
         uses: azure/webapps-deploy@v2
         with:
-          app-name: swapi-dotnet-dev
+          app-name: swapi-cubit-dev
           publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
           package: ./app
         

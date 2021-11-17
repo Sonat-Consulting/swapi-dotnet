@@ -3,3 +3,7 @@ bin/
 obj/
 
 *DotSettings.user
+
+**/.terraform/*
+*.tfstate
+*.tfstate.*
