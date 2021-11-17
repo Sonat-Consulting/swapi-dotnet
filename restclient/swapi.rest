@@ -18,14 +18,18 @@ GET https://localhost:5001/error
 
 ###
 # @name GetFilmsDev
-GET https://swapi-dotnet-dev.azurewebsites.net/swapi/films
+GET https://swapi-dotnet-app-dev.azurewebsites.net/swapi/films
 Accept: application/json
 
 ###
 # @name GetPeopleDev
-GET https://swapi-dotnet-dev.azurewebsites.net/swapi/people
+GET https://swapi-dotnet-app-dev.azurewebsites.net/swapi/people
 
 
 ###
 # @name GetVersionDev
-GET https://swapi-dotnet-dev.azurewebsites.net/version
+GET https://swapi-dotnet-app-dev.azurewebsites.net/version
+
+###
+# @name GetErrorDev
+GET https://swapi-dotnet-app-dev.azurewebsites.net/error

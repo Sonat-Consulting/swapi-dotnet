@@ -18,6 +18,7 @@ resource "azurerm_app_service" "swapi_app_service" {
 
   site_config {
     dotnet_framework_version = "v6.0"
+    linux_fx_version = "DOTNETCORE|6.0"
   }
 
   app_settings = {
