@@ -1,6 +1,6 @@
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 
-COPY ./bin/Release/net5.0 /app
+COPY ./bin/Release/net6.0/publish /app
 
 WORKDIR /app
 EXPOSE 80
