@@ -23,30 +23,4 @@ jobs:
         run: dotnet test --no-restore --verbosity normal
       - name: Publish .net artifacts
         run: dotnet publish -c Release -o ./app --version-suffix $GITHUB_RUN_NUMBER ./swapi-dotnet
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: swapi-dotnet-artifact
-          path: ./app
-        
-  
-  deploydev:
-    needs: build
-    runs-on: ubuntu-latest
-    environment: Dev
-    
-    steps:
-      - uses: actions/download-artifact@v2
-        name: Download artifacts
-        with:
-          name: swapi-dotnet-artifact
-          path: ./app
-    
-      - name: 'Deploy to Azure WebApp'
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: swapi-dotnet-app-dev
-          publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
-          package: ./app
-        
     

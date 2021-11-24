@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpLogging;
@@ -38,6 +39,8 @@ namespace Swapi.Dotnet
                 options.RequestBodyLogLimit = 4096;
                 options.ResponseBodyLogLimit = 4096;
             });
+
+            services.AddSingleton<IAppConfiguration, AppConfiguration>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

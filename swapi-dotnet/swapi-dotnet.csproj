@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>Swapi.Dotnet</RootNamespace>
         <VersionPrefix>0.0.1</VersionPrefix>
-    </PropertyGroup>
+      <UserSecretsId>bf2e6177-52aa-4c1a-b9ac-5ce1572c6fd2</UserSecretsId>
+  </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.19.0" />
