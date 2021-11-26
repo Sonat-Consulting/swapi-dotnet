@@ -40,6 +40,8 @@ namespace Swapi.Dotnet
                 options.ResponseBodyLogLimit = 4096;
             });
 
+            services.AddCors();
+
             services.AddSingleton<IAppConfiguration, AppConfiguration>();
         }
 
@@ -52,6 +54,8 @@ namespace Swapi.Dotnet
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "swapi_dotnet v1"));
             }
+
+            app.UseCors(builder => builder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
 
             app.UseHttpLogging();
 
